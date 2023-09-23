@@ -12,9 +12,10 @@ import android.widget.TextView;
 
 public class loginScreen extends AppCompatActivity {
 
-    TextView signUp;
+    TextView signUp, forgetPassword;
 
     ImageButton backArrow;
+    Button login;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -23,6 +24,8 @@ public class loginScreen extends AppCompatActivity {
         setContentView(R.layout.activity_login_screen);
 
         signUp = findViewById(R.id.tv_signUp);
+        forgetPassword = findViewById(R.id.tv_forgetPassword);
+        login = findViewById(R.id.bt_login);
 
         backArrow = findViewById(R.id.ib_backArrow);
 
@@ -30,6 +33,22 @@ public class loginScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(loginScreen.this, mainscreen.class);
+                startActivity(i);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(loginScreen.this, HomeScreen.class);
+                startActivity(i);
+            }
+        });
+
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(loginScreen.this, forgetPassword.class);
                 startActivity(i);
             }
         });

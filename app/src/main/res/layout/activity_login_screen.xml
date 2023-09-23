@@ -58,6 +58,16 @@
             android:text="Password"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/tv_forgetPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forget Password"
+        android:padding="12dp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="#FF0000"
+        android:textAlignment="textEnd"/>
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_login"
